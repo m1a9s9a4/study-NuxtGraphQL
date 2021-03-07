@@ -41,7 +41,16 @@ export default {
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
+    '@nuxtjs/apollo',
   ],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:57920/'
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
