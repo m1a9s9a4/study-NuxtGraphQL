@@ -11,9 +11,6 @@ import firstPersonGql from '~/apollo/queries/firstPerson.graphql';
 
 export default Vue.extend({
   name: 'App',
-  components: {
-
-  },
   data () {
     return {
       person: {},
@@ -21,9 +18,6 @@ export default Vue.extend({
   },
   async created() {
     await this.start()
-  },
-  computed: {
-
   },
   methods: {
     async start() {
