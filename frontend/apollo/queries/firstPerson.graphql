@@ -1,5 +1,10 @@
 query FirstPerson($personID: ID!) {
   person (personID: $personID) {
     name
+    filmConnection {
+      films {
+        title
+      }
+    }
   }
 }
