@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import firstPersonGql from '~/apollo/queries/firstPerson.graphql';
 import ggl from 'graphql-tag'
 
 export default Vue.extend({
@@ -26,13 +27,7 @@ export default Vue.extend({
   methods: {
     async start() {
       const result = await this.$apollo.query({
-        query: ggl`
-          query FirstPerson ($personID: ID!) {
-            person(personID: $personID) {
-              name
-            }
-          }
-        `,
+        query: firstPersonGql,
         variables: {
           personID: 1,
         }
