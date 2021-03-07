@@ -27,8 +27,10 @@
       "@nuxt/types",
       "@types/node",
       "vue-apollo/types"
-    ]
+    ],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
+  "files": ["src/@types/graphql.d.ts"],
   "exclude": [
     "node_modules",
     ".nuxt",
